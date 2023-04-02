@@ -6,10 +6,17 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
+      <HelloWorld msg="You did it!" class=" bg-blue-300" />
+      <div class=" menu">最佳实践</div>
+      <div class="w-32 h-32 max-[1300px]:bg-green-500 bg-blue-500"></div>
+      <div class="w-32 h-32 bg-blue-500 dark:bg-green-500"></div>
+      <span class="text-primary">主色</span>
+      <span class="text-regular">主色</span>
+      <span class="text-disabled">主色</span>
+      <div class="foo">
+        <div class="bar"></div>
+      </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -20,7 +27,12 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped >
+.menu {
+  @apply p-2 text-gray-900 font-semibold
+}
+
+
 header {
   line-height: 1.5;
   max-height: 100vh;
